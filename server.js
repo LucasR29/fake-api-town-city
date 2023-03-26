@@ -1,0 +1,34 @@
+const jsonServer = require("json-server");
+const auth = require("json-server-auth");
+const cors = require("cors");
+const port = process.env.PORT || 3001;
+
+const app = jsonServer.create();
+const router = jsonServer.router("db.json");
+
+app.db = router.db;
+
+const rules = auth.rewriter({
+  users: 660,
+
+  issues: 660,
+
+  commom_areas: 660,
+
+  saloon_reservation: 660,
+  saloon_reserved_dates: 660,
+
+  pool_reservation: 660,
+  pool_reserved_dates: 660,
+
+  grill_reservation: 660,
+  grill_reserved_dates: 660,
+});
+
+app.use(cors());
+app.use(rules);
+app.use(auth);
+app.use(router);
+app.listen(port);
+
+console.log("Server is running on port:", port);
