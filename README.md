@@ -1,8 +1,7 @@
-##### OBS: não deletar o síndico e não commitar nesse repo (além do Lucas), fazer o clone do repo e rodar em sua máquina. Na aplicação já está setada base URL "http://localhost:3001"
+Credenciais admin:
 
-### Considerações:
-
-Todas as rotas precisam ser 660, pois o síndico precisa conseguir modificá-las (métodos de patch e delete). Com exeção de login e register, todas as rotas necessitam de token.
+Email: admin@mail.com
+Senha: Admin123*
 
 #### /register: 
 Faz o cadastro de um usuário com os dados abaixo e retorna um objeto com as proriedades "accsessToken" e "user" (mesmas infos enviadas no cadastro, mas sem o password e com um id único gerado automaticamente. O isSyndic é adicionado no front-end apenas, se testar no insomnia fica sem)
