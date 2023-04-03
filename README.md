@@ -22,8 +22,8 @@ Faz o login com as informações abaixo e retorna a mesma info retornada no cada
 
 ```
 {
-      "email": "alyssonLindao@mail.com",
-      "password": "bestPassw0rd"
+      "email": "admin@mail.com",
+      "password": "admin123*"
 }
 ```
 #### /issues: 
